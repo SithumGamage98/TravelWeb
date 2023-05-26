@@ -10,7 +10,7 @@ function ViewAllEvents() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get("http://localhost:8060/events/event");
+      const response = await axios.get("https://travelweb-wu6a.onrender.com/events/event");
       setEvents(response.data);
     }
     fetchData();
@@ -19,7 +19,7 @@ function ViewAllEvents() {
   const handleDelete = async (event) => {
     try {
       const response = await axios.delete(
-        `http://localhost:8060/events/event/delete/${event._id}`
+        `https://travelweb-wu6a.onrender.com/events/event/delete/${event._id}`
       );
       if (response.status === 201) {
         alert("Deleted successfully....");

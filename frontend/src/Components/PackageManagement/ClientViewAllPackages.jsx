@@ -9,7 +9,7 @@ function ClientViewAllPackages() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get("http://localhost:8060/packages/package");
+      const response = await axios.get("https://travelweb-wu6a.onrender.com/packages/package");
       setPackages(response.data);
     }
     fetchData();

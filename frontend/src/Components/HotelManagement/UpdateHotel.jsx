@@ -24,7 +24,7 @@ const UpdateHotel = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8060/hotels/hotel/view/${id}`)
+      .get(`https://travelweb-wu6a.onrender.com/hotels/hotel/view/${id}`)
       .then((res) => {
         setHotel({
           name: res.data.name,
@@ -129,7 +129,7 @@ const UpdateHotel = () => {
     };
 
     axios
-      .put(`http://localhost:8060/hotels/hotel/update/${id}`, data)
+      .put(`https://travelweb-wu6a.onrender.com/hotels/hotel/update/${id}`, data)
       .then((res) => {
         navigate(`/hotels`);
         alert('Updated successfully....');

@@ -39,7 +39,7 @@ function AddEvent() {
         }
 
         const result = await axios.post(
-          "http://localhost:8060/events/add/new",
+          "https://travelweb-wu6a.onrender.com/events/add/new",
           formData
         );
 

@@ -20,7 +20,7 @@ const Login = () => {
         password
       };
 
-      const result = await axios.post("http://localhost:8060/login", loginData);
+      const result = await axios.post("https://travelweb-wu6a.onrender.com/login", loginData);
 
       if (result) {
         setLoading(false);

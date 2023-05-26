@@ -69,7 +69,7 @@ function AddHotel() {
       }
 
       const result = await axios.post(
-        "http://localhost:8060/hotels/add/new",
+        "https://travelweb-wu6a.onrender.com/hotels/add/new",
         formData
       );
 

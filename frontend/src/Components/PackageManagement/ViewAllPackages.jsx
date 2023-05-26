@@ -10,7 +10,7 @@ function ViewAllPackages() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get("http://localhost:8060/packages/package");
+      const response = await axios.get("https://travelweb-wu6a.onrender.com/packages/package");
       setPackages(response.data);
     }
     fetchData();
@@ -19,7 +19,7 @@ function ViewAllPackages() {
   async function handleDelete(pack) {
     try {
       await axios.delete(
-        `http://localhost:8060/packages/package/delete/${pack._id}`
+        `https://travelweb-wu6a.onrender.com/packages/package/delete/${pack._id}`
       );
       alert("Deleted successfully....");
       setPackages(packages.filter((p) => p._id !== pack._id));

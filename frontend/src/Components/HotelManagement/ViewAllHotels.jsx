@@ -10,7 +10,7 @@ function ViewAllHotels() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get('http://localhost:8060/hotels/hotel');
+      const response = await axios.get('https://travelweb-wu6a.onrender.com/hotels/hotel');
       setHotels(response.data);
     }
     fetchData();
@@ -19,7 +19,7 @@ function ViewAllHotels() {
   async function handleDelete(hotel) {
     try {
       await axios.delete(
-        `http://localhost:8060/hotels/hotel/delete/${hotel._id}`
+        `https://travelweb-wu6a.onrender.com/hotels/hotel/delete/${hotel._id}`
       );
       alert('Deleted successfully....');
       setHotels(hotels.filter((h) => h._id !== hotel._id));

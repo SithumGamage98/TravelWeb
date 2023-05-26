@@ -28,7 +28,7 @@ const Register = () => {
         passwordVerify,
       };
 
-      const result = await axios.post("http://localhost:8060/user/register", registerData);
+      const result = await axios.post("https://travelweb-wu6a.onrender.com/user/register", registerData);
 
       if (result?.status === 201) {
         setLoading(false);

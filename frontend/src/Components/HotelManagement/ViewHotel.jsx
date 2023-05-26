@@ -13,7 +13,7 @@ const ViewHotel = () => {
     const fetchBlog = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8060/hotels/hotel/view/${id}`
+          `https://travelweb-wu6a.onrender.com/hotels/hotel/view/${id}`
         );
         setBlog(response.data);
       } catch (error) {

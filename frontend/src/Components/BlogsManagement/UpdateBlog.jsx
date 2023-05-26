@@ -17,7 +17,7 @@ const UpdateBlog = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8060/bloggers/blogs/view/${id}`)
+      .get(`https://travelweb-wu6a.onrender.com/bloggers/blogs/view/${id}`)
       .then((res) => {
         setBooking({
           blogtitle: res.data.blogtitle,
@@ -50,7 +50,7 @@ const UpdateBlog = () => {
       };
 
       axios
-        .put(`http://localhost:8060/bloggers/blogs/update/${id}`, data)
+        .put(`https://travelweb-wu6a.onrender.com/bloggers/blogs/update/${id}`, data)
         .then((res) => {
           navigate(`/blogs`);
           alert('Updated successfully....');

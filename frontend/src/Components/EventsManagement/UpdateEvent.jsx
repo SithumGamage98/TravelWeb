@@ -18,7 +18,7 @@ const UpdateEvent = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8060/events/event/view/${id}`)
+      .get(`https://travelweb-wu6a.onrender.com/events/event/view/${id}`)
       .then((res) => {
         setEvent({
           eventname: res.data.eventname,
@@ -53,7 +53,7 @@ const UpdateEvent = () => {
       };
 
       axios
-        .put(`http://localhost:8060/events/event/update/${id}`, data)
+        .put(`https://travelweb-wu6a.onrender.com/events/event/update/${id}`, data)
         .then((res) => {
           navigate(`/events`);
           alert("Updated successfully....");
