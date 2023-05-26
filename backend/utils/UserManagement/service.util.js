@@ -1,5 +1,5 @@
-const Token = require("../../models/userManagement/token.model");
-const crypto = require("crypto");
+const Token = require('../../models/userManagement/token.model');
+const crypto = require('crypto');
 
 /**
  * It finds a token in the database with the userID of the user that is trying to verify their email,
@@ -13,17 +13,17 @@ async function getVerifyToken(id) {
     const result = await Token.findOne({ userID: id });
 
     /* Checking if the result is not null, if it is not null it is removing the result. */
-    //if (result) await result.remove();
+    if (result) await result.remove();
 
     /* Creating a new token and saving it to the database. */
     const token = await new Token({
       userID: id,
-      token: crypto.randomBytes(32).toString("hex"),
+      token: crypto.randomBytes(32).toString('hex'),
     }).save();
 
     return token;
   } catch (error) {
-    throw new TypeError("Error in getVerifyToken: " + error.message);
+    throw new TypeError('Error in getVerifyToken: ' + error.message);
   }
 }
 
@@ -35,11 +35,11 @@ async function removeCookie(res) {
   try {
     res
       .status(201)
-      .cookie("token", "", {
+      .cookie('token', '', {
         httpOnly: true,
         expires: new Date(0),
         secure: true,
-        sameSite: "none",
+        sameSite: 'none',
       })
       .send();
   } catch (err) {
