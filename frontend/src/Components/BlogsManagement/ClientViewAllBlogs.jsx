@@ -9,7 +9,7 @@ function ClientViewAllBlogs() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get("http://localhost:8060/bloggers/blogs");
+      const response = await axios.get("https://travelweb-wu6a.onrender.com/bloggers/blogs");
       setBlogs(response.data);
     }
     fetchData();

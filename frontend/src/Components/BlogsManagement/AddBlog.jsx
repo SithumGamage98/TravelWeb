@@ -33,7 +33,7 @@ function AddBlog() {
       // Perform form validation before submitting
       if (validateForm()) {
         const result = await axios.post(
-          "http://localhost:8060/bloggers/add/new",
+          "https://travelweb-wu6a.onrender.com/bloggers/add/new",
           formData
         );
 

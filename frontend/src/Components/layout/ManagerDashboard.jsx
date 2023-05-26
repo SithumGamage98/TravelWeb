@@ -10,16 +10,16 @@ const ManagerDashboard = () => {
 
   async function getData() {
     try {
-      const resultAllEventsCount = await axios.get('http://localhost:8060/events/event/count');
+      const resultAllEventsCount = await axios.get('https://travelweb-wu6a.onrender.com/events/event/count');
       setAllEventsCount(resultAllEventsCount.data.total);
 
-      const resultAllBlogsCount = await axios.get('http://localhost:8060/bloggers/blog/count');
+      const resultAllBlogsCount = await axios.get('https://travelweb-wu6a.onrender.com/bloggers/blog/count');
       setAllBlogsCount(resultAllBlogsCount.data.total);
 
-      const resultAllPackagesCount = await axios.get('http://localhost:8060/packages/pack/count');
+      const resultAllPackagesCount = await axios.get('https://travelweb-wu6a.onrender.com/packages/pack/count');
       setAllPackagesCount(resultAllPackagesCount.data.total);
 
-      const resultAllHotelsCount = await axios.get('http://localhost:8060/hotels/hotel/count');
+      const resultAllHotelsCount = await axios.get('https://travelweb-wu6a.onrender.com/hotels/hotel/count');
       setAllHotelsCount(resultAllHotelsCount.data.total);
     } catch (err) {
       console.error(err);

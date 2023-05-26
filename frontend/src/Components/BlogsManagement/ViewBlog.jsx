@@ -13,7 +13,7 @@ const ViewBlog = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const response = await axios.get(`http://localhost:8060/bloggers/blogs/view/${id}`);
+        const response = await axios.get(`https://travelweb-wu6a.onrender.com/bloggers/blogs/view/${id}`);
         setBlog(response.data);
       } catch (error) {
         console.error(error);

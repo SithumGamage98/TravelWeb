@@ -13,7 +13,7 @@ async function getVerifyToken(id) {
     const result = await Token.findOne({ userID: id });
 
     /* Checking if the result is not null, if it is not null it is removing the result. */
-    if (result) await result.remove();
+    //if (result) await result.remove();
 
     /* Creating a new token and saving it to the database. */
     const token = await new Token({

@@ -11,7 +11,7 @@ const ViewPackage = () => {
   useEffect(() => {
     const fetchPackage = async () => {
       try {
-        const response = await axios.get(`http://localhost:8060/packages/package/view/${id}`);
+        const response = await axios.get(`https://travelweb-wu6a.onrender.com/packages/package/view/${id}`);
         setPackage(response.data);
       } catch (error) {
         console.error(error);

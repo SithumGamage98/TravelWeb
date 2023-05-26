@@ -12,7 +12,7 @@ function LogOut() {
   async function logOut() {
     try {
       /* Making a GET request to the logout route on the server. */
-      await axios.get("http://localhost:8060/logout");
+      await axios.get("https://travelweb-wu6a.onrender.com/logout");
       /* Removing the type and status from local storage. */
       localStorage.removeItem("type");
       /* Reloading the page. */

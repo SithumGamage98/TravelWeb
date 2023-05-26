@@ -58,7 +58,7 @@ function AddPackage() {
       }
 
       const result = await axios.post(
-        "http://localhost:8060/packages/add/new",
+        "https://travelweb-wu6a.onrender.com/packages/add/new",
         formData
       );
 

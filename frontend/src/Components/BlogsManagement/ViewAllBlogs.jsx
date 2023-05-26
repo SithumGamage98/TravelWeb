@@ -10,7 +10,7 @@ function ViewAllBlogs() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get("http://localhost:8060/bloggers/blogs");
+      const response = await axios.get("https://travelweb-wu6a.onrender.com/bloggers/blogs");
       setBlogs(response.data);
     }
     fetchData();
@@ -32,7 +32,7 @@ function ViewAllBlogs() {
   async function handleDelete(element) {
     try {
       await axios.delete(
-        `http://localhost:8060/bloggers/blogs/delete/${element._id}`
+        `https://travelweb-wu6a.onrender.com/bloggers/blogs/delete/${element._id}`
       ).then((res) => {
         if (res.status === 201) {
           alert("Deleted successfully....");

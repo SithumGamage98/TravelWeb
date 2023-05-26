@@ -13,7 +13,7 @@ const ViewEvent = () => {
   useEffect(() => {
     const fetchEvent = async () => {
       try {
-        const response = await axios.get(`http://localhost:8060/events/event/view/${id}`);
+        const response = await axios.get(`https://travelweb-wu6a.onrender.com/events/event/view/${id}`);
         setEvent(response.data);
       } catch (error) {
         console.error(error);

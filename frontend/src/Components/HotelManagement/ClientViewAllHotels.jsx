@@ -10,7 +10,7 @@ function ClientViewAllHotels() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get('http://localhost:8060/hotels/hotel');
+      const response = await axios.get('https://travelweb-wu6a.onrender.com/hotels/hotel');
       setHotels(response.data);
     }
     fetchData();

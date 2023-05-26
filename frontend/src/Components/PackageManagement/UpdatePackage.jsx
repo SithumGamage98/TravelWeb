@@ -25,7 +25,7 @@ const UpdatePackage = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8060/packages/package/view/${id}`)
+      .get(`https://travelweb-wu6a.onrender.com/packages/package/view/${id}`)
       .then((res) => {
         setPack({
           packagename: res.data.packagename,
@@ -74,7 +74,7 @@ const UpdatePackage = () => {
     };
 
     axios
-      .put(`http://localhost:8060/packages/package/update/${id}`, data)
+      .put(`https://travelweb-wu6a.onrender.com/packages/package/update/${id}`, data)
       .then((res) => {
         alert("Updated successfully....");
         navigate(`/packages`);
